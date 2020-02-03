@@ -18,7 +18,7 @@ Time (NY)    | Monday                           |    Tuesday                    
 
 <!--- MONDAY --->
 [1-1A]: https://github.com/awhit012/Node-React/blob/master/week-1/vanilla-node-review.md
-[1-1B]: #
+[1-1B]: https://github.com/awhit012/Node-React/blob/master/week-1/express-review.md
 <!--- TUESDAY --->
 [1-2A]: #
 [1-2B]: #
