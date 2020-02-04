@@ -117,10 +117,12 @@ request.on('data', (chunk) => {
 
 We can add an 'error' listener to our requests like this: 
 
+```js
 request.on('error', (err) => {
   // This prints the error message and stack trace to `stderr`.
   console.error(err.stack);
 });
+```
 
 ## Implementation 
 
