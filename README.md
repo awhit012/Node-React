@@ -73,11 +73,11 @@ Time (NY)    | Monday               | Tuesday                 | Wednesday       
 
 ### Beyond: Python
 
-#### Week 4 - Intro to Python
+#### Week 4 - Intro to Python, Flask
 
-#### Week 5 & 6 - Flask
+#### Week 5 Flask
 
-#### Week 7 & 8 - Django
+#### Week 6 & 7 - Django
 
 
 
