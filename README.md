@@ -23,7 +23,7 @@ Time (NY)    | Monday                           |    Tuesday                    
 [1-2A]: https://github.com/awhit012/Node-React/blob/master/week-1/express-pug-review.md
 [1-2B]: #
 <!--- WEDNESDAY --->
-[1-3A]: #
+[1-3A]: https://github.com/awhit012/Node-React/blob/master/week-1/react-in-express
 [1-3B]: #
 <!--- THURSDAY --->
 [1-4A]: #
