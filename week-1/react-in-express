@@ -1,0 +1,64 @@
+# React in Express - A Monolithic Design Pattern
+
+In this lesson we will build an Express app that serves a React app. 
+
+## Using Express Generator
+
+To get our boilerplate code done quickly, we can use express-generator. 
+
+Since we will be using React as our view layer, we will add `--no-view`:
+
+```bash
+npx express-generator --no-view react-in-express
+```
+
+This sets up our basic Express app, including this line, for serving static files from the public folder as we have seen before:
+
+```js
+app.use(express.static(path.join(__dirname, 'public')));
+```
+
+For now, let's comment out lines 17-18 of app.js, which set up a router, and lets add a couple routes of our own: 
+
+```js
+
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
+
+// we will use routes like these to get data from our react app
+app.get('/api/items', (req,res) => {
+    var list = ["item1", "item2", "item3"];
+    res.json(list);
+    console.log('Sent list of items');
+});
+
+// Handles any requests that don't match the ones above will default to sending the React app. 
+app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/public/build/index.html'));
+});
+```
+
+## Using `create-react-app`
+
+If you havn't already, install `create-react-app`
+
+`npm install -g create-react-app`
+
+Then, lets delete the 'public' directory, and create a new empty folder called `client`. We do this because create-react-app is going to create a sub-folder called public. So we want to put it in a folder called client. 
+
+From our root project directory run `create-react-app client`
+
+This will create our react app inside of the client directory. Lets take a look at those files. 
+
+## Running the App
+
+Finally, we need to run `npm run build` from inside our react app.
+
+For dev purposes, we will then run a server from within the react app: 
+
+`npm start`, and we will access the react app from a different PORT. But in production, all files will be static files that live in `/client/public/build`, and the second server will not be needed. 
+
+
+
+
+
